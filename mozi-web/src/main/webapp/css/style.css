@@ -1,0 +1,126 @@
+header{
+    background-color: black;
+    height: 100px;
+}
+header {
+    width: 1000px;
+    height: 300px;
+}
+header>img {
+    width: 1000px;
+    height: 310px;
+}
+#continer {
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 5px 0px 20px black;
+    opacity:0.9;
+    padding: 0px;
+    height: 1300px;
+}
+#filmekcontiner{
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 5px 0px 20px black;
+    opacity:0.9;
+    padding: 0px;
+    height: 2200px;
+}
+nav {
+    background-color: gray;
+}
+nav ul li{
+    display: inline-block;
+    width: 138px;
+    font-size: 15px;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    font-weight: bolder;
+    border-radius: 4px;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+}
+nav ul li:hover {
+    background-color: dimgray;
+    color: darkgray;
+    cursor: pointer;
+}
+
+nav ul li ul{
+    display: none;
+    position: absolute;
+    padding-left: 0px;
+    border-radius: 0px 0px 4px 4px;
+    top: 363px;
+}
+nav ul li ul li{
+    border-radius: 4px;
+}
+nav ul li:hover > ul{
+    display:block;
+}
+.menu{
+    background-color: grey;
+}
+#form_login_reg{
+    width: 400px;
+    position:relative;
+    top:30%;
+    left:50%;
+    margin-left:-200px;
+    margin-top:-200px;
+    text-align: left;
+}
+#szekek{
+    position: relative;
+    top: 30%;
+    left: 50%;
+    margin-left:100px;
+    margin-top: -400px;
+}
+#form_foglalas{
+    width: 400px;
+    position:relative;
+    top:30%;
+    left:50%;
+    margin-left:-300px;
+    margin-top:-200px;
+    text-align: left;
+}
+#filtercim{
+    background-image: url('../img/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+body{
+    background-image: url("../img/background.jpg");
+}
+.film_kep{
+    width: 200px;
+    height: 200px;
+    z-index: auto;
+    transition: height 1s ease-out,width 1s ease-out,z-index 1s ease-out;
+}
+.film_kep:hover{
+    width: 220px;
+    height: 220px;
+    z-index: 100;
+}
+#menu{
+    display: flex;
+    justify-content: center;
+}
+
+
+

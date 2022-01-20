@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import tornadofx.control.*?>
+
+<GridPane prefHeight="404.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.alkfejl.controller.EditVetitesController">
+    <columnConstraints>
+        <ColumnConstraints minWidth="10.0" percentWidth="18.0" prefWidth="100.0" />
+        <ColumnConstraints minWidth="10.0" percentWidth="70.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" />
+        <RowConstraints maxHeight="35.0" minHeight="5.0" percentHeight="20.0" prefHeight="31.0" />
+    </rowConstraints>
+    <children>
+        <Label text="Film id" GridPane.rowIndex="1" />
+        <Label text="Dátum" GridPane.rowIndex="2" />
+        <Label text="Terem id" GridPane.rowIndex="3" />
+        <Label text="Szabad helyek" GridPane.rowIndex="4" />
+        <Label text="Film cím" GridPane.rowIndex="5" />
+        <HBox alignment="CENTER" prefHeight="104.0" prefWidth="658.0" spacing="10.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#onSave" text="Mentés" />
+                <Button mnemonicParsing="false" onAction="#onCancel" text="Bezár" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+        <TextField fx:id="film_id" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="terem_id" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="szabad_helyek" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField fx:id="film_cim" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <StackPane prefHeight="150.0" prefWidth="200.0" />
+        <Label text="Vetítés módosítása" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+        <DateTimePicker fx:id="datum" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    </children>
+
+</GridPane>

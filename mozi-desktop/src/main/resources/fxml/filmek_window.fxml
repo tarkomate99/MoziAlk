@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="761.0" prefWidth="942.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.alkfejl.controller.FilmekWindowController">
+    <children>
+        <HBox layoutX="85.0" prefHeight="52.0" prefWidth="857.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="709.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label alignment="CENTER" text="Főoldal" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="10.0" top="30.0" />
+                    </HBox.margin>
+                </Label>
+            </children>
+        </HBox>
+        <HBox prefHeight="52.0" prefWidth="85.0" style="-fx-background-color: black;">
+            <children>
+                <Label text="Menü" textFill="WHITE">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <VBox layoutY="52.0" prefHeight="710.0" prefWidth="85.0" style="-fx-background-color: black;">
+            <children>
+                <Button mnemonicParsing="false" onAction="#openMain" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: black;" text="Főoldal" textFill="WHITE" />
+                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: black;" text="Filmek" textFill="WHITE" />
+                <Button mnemonicParsing="false" onAction="#openTermek" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: black;" text="Termek" textFill="WHITE" />
+                <Button mnemonicParsing="false" onAction="#openVetitesek" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: black;" text="Vetítések" textFill="WHITE" />
+                <Button mnemonicParsing="false" onAction="#openFoglalasok" prefHeight="35.0" prefWidth="85.0" style="-fx-background-color: black;" text="Foglalások" textFill="WHITE" />
+            </children>
+        </VBox>
+      <Label layoutX="114.0" layoutY="73.0" text="Filmek listája">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="filmekTable" layoutX="114.0" layoutY="122.0" prefHeight="557.0" prefWidth="775.0">
+        <columns>
+          <TableColumn fx:id="cimColumn" prefWidth="113.0" text="Cím" />
+          <TableColumn fx:id="hosszColumn" prefWidth="66.0" text="Hossz" />
+            <TableColumn fx:id="korhatarColumn" prefWidth="71.0" text="Korhatar" />
+            <TableColumn fx:id="rendezoColumn" prefWidth="138.0" text="Rendezo" />
+            <TableColumn fx:id="szereplokColumn" prefWidth="245.0" text="Szereplők" />
+            <TableColumn fx:id="actionsColumn" minWidth="0.0" prefWidth="141.0" text="Módosítás" />
+        </columns>
+      </TableView>
+      <Button layoutX="792.0" layoutY="723.0" mnemonicParsing="false" onAction="#openAdd" text="Film hozzáadás" />
+      <Label layoutX="270.0" layoutY="73.0" text="Keresés cím alapján" />
+      <TextField fx:id="cimSearch" layoutX="248.0" layoutY="91.0" onKeyReleased="#onSearch" />
+      <Label layoutX="387.0" layoutY="73.0" text="Keresés hossz alapján" />
+      <TextField fx:id="hosszSearch" layoutX="417.0" layoutY="91.0" onKeyReleased="#onSearch" prefHeight="25.0" prefWidth="54.0" />
+      <Label layoutX="515.0" layoutY="73.0" text="Keresés korhatár alapján" />
+      <TextField fx:id="korhatarSearch" layoutX="560.0" layoutY="91.0" onKeyReleased="#onSearch" prefHeight="25.0" prefWidth="41.0" />
+      <Label layoutX="651.0" layoutY="73.0" text="Keresés rendező alapján" />
+      <TextField fx:id="rendezoSearch" layoutX="650.0" layoutY="91.0" onKeyReleased="#onSearch" prefHeight="25.0" prefWidth="130.0" />
+      <Label layoutX="792.0" layoutY="73.0" text="Keresés szereplő alapján" />
+      <TextField fx:id="szereploSearch" layoutX="782.0" layoutY="91.0" onKeyReleased="#onSearch" />
+    </children>
+</AnchorPane>

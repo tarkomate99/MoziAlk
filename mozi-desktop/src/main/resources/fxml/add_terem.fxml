@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<GridPane prefHeight="203.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.alkfejl.controller.AddTeremController">
+    <columnConstraints>
+        <ColumnConstraints minWidth="10.0" percentWidth="23.0" prefWidth="100.0" />
+        <ColumnConstraints minWidth="10.0" percentWidth="85.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" />
+        <RowConstraints maxHeight="35.0" minHeight="5.0" percentHeight="10.0" prefHeight="31.0" />
+    </rowConstraints>
+    <children>
+        <Label text="Név" GridPane.rowIndex="1" />
+        <Label text="Sorok száma" GridPane.rowIndex="2" />
+        <Label text="Oszlopok száma" GridPane.rowIndex="3" />
+        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="508.0" spacing="10.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" onAction="#onSave" text="Mentés" />
+                <Button mnemonicParsing="false" onAction="#onCancel" text="Bezár" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+        <TextField fx:id="nev" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="sorszam" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="oszlopszam" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <StackPane prefHeight="150.0" prefWidth="200.0" />
+        <Label text="Terem módosítás" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+    </children>
+</GridPane>
